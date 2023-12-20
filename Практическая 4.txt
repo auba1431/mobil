@@ -1,0 +1,88 @@
+1. Задание
+public class Square {
+    public static void main(String[] args) {
+        int sideLength = 10;
+
+        // Выводим верхнюю границу квадрата
+        for (int i = 0; i < sideLength; i++) {
+            System.out.print("* ");
+        }
+        System.out.println();
+
+        // Выводим боковые границы и пробелы внутри квадрата
+        for (int i = 0; i < sideLength - 2; i++) {
+            System.out.print("* ");
+            for (int j = 0; j < sideLength - 2; j++) {
+                System.out.print("  ");
+            }
+            System.out.println("*");
+        }
+
+        // Выводим нижнюю границу квадрата
+        for (int i = 0; i < sideLength; i++) {
+            System.out.print("* ");
+        }
+    }
+}
+
+11. Задание
+
+import java.util.Scanner;
+
+public class FactorialSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите число N: ");
+        int N = scanner.nextInt();
+        
+        double sum = calculateFactorialSum(N);
+        
+        System.out.println("Сумма чисел 1 + 1/1! + 1/2! + ... + 1/N! равна: " + sum);
+        
+        scanner.close();
+    }
+    
+    // Метод для вычисления суммы чисел 1 + 1/1! + 1/2! + ... + 1/N!
+    public static double calculateFactorialSum(int N) {
+        double factorial = 1;
+        double sum = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            factorial *= i; // Вычисляем факториал числа i
+            
+            sum += 1.0 / factorial; // Добавляем 1/i! к общей сумме
+        }
+        
+        return sum;
+    }
+}
+21.Задание
+
+import java.util.Scanner;
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите натуральное число: ");
+        int number = scanner.nextInt();
+        
+        int sum = calculateSumOfDigits(number);
+        
+        System.out.println("Сумма цифр числа " + number + " равна: " + sum);
+        
+        scanner.close();
+    }
+    
+    // Метод для подсчета суммы цифр числа
+    public static int calculateSumOfDigits(int num) {
+        int sum = 0;
+        
+        while (num != 0) {
+            sum += num % 10; // Добавляем к сумме последнюю цифру числа
+            num /= 10; // Убираем последнюю цифру числа
+        }
+        
+        return sum;
+    }
+}

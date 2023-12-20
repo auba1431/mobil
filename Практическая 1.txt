@@ -1,0 +1,183 @@
+1. Задание
+import java.util.Scanner;
+
+public class LastDigit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите натуральное число: ");
+        int number = scanner.nextInt();
+
+        int lastDigit = number % 10;
+        System.out.println("Последняя цифра числа: " + lastDigit);
+
+        scanner.close();
+    }
+}
+
+2. Задание
+import java.util.Scanner;
+
+public class TensPlace {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите двузначное число: ");
+        int number = scanner.nextInt();
+
+        int tensPlace = (number % 100) / 10;
+        System.out.println("Число десятков: " + tensPlace);
+
+        scanner.close();
+    }
+}
+
+3. Задание
+import java.util.Scanner;
+
+public class TensInNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите натуральное число: ");
+        int number = scanner.nextInt();
+
+        int tensPlace = (number / 10) % 10;
+        System.out.println("Число десятков в числе: " + tensPlace);
+
+        scanner.close();
+    }
+}
+
+4. Задание
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите трехзначное число: ");
+        int number = scanner.nextInt();
+
+        int sum = (number / 100) + ((number / 10) % 10) + (number % 10);
+        System.out.println("Сумма цифр числа: " + sum);
+
+        scanner.close();
+    }
+}
+
+5. Задание
+import java.util.Scanner;
+
+public class NextEvenNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите целое число: ");
+        int number = scanner.nextInt();
+
+        int nextEven = number + 2 - (number % 2);
+        System.out.println("Следующее чётное число: " + nextEven);
+
+        scanner.close();
+    }
+}
+
+6. Задание
+import java.util.Scanner;
+
+public class DigitalClock {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите количество минут: ");
+        int minutes = scanner.nextInt();
+
+        int hours = (minutes / 60) % 24;
+        int remainingMinutes = minutes % 60;
+
+        System.out.println("На электронных часах: " + hours + " часов " + remainingMinutes + " минут.");
+
+        scanner.close();
+    }
+}
+
+7. Задание
+import java.util.Scanner;
+
+public class SchoolLessonEnd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите номер урока (от 1 до 10): ");
+        int lessonNumber = scanner.nextInt();
+
+        int lessonEndHours = 9 + lessonNumber * 2 + (lessonNumber - 1) / 2;
+        int lessonEndMinutes = (lessonNumber % 2 == 0) ? 15 : 5;
+
+        System.out.println("Урок заканчивается в " + lessonEndHours + ":" + lessonEndMinutes);
+
+        scanner.close();
+    }
+}
+
+8. Задание
+import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите три целых числа через пробел: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+
+        int sum = num1 + num2 + num3;
+        int product = num1 * num2 * num3;
+        double average = sum / 3.0;
+
+        System.out.println("Сумма: " + sum);
+        System.out.println("Произведение: " + product);
+        System.out.println("Среднее арифметическое: " + average);
+
+        scanner.close();
+    }
+}
+
+9. Задание
+import java.util.Scanner;
+
+public class PowerOfTen {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите число для возведения в степень 10: ");
+        int number = scanner.nextInt();
+
+        int powered = number * number * number * number * number * number * number * number * number * number;
+
+        System.out.println(number + " в степени 10 равно: " + powered);
+
+        scanner.close();
+    }
+}
+
+10. Задание
+import java.util.Scanner;
+
+public class CheckDivisibility {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите два натуральных числа через пробел: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        int result = (num1 % num2 == 0 || num2 % num1 == 0) ? 1 : -1;
+
+        System.out.println("Результат проверки делимости: " + result);
+
+        scanner.close();
+    }
+}

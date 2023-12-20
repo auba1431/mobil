@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class New
+{
+	public static void main(String args[])
+	{
+		Scanner in = new Scanner(System.in, "Cp866");
+		
+		double cos60 = Math.sqrt(1)/2; // без корня выводит 0.0 
+		System.out.println("Косинус угла 60 = " + cos60);
+		
+		double cos45=Math.sqrt(2)/2;
+		System.out.println("Косинус угла 45 = " + cos45);
+		
+		double cos40=Math.sqrt(1-Math.pow(0.643,2));
+		System.out.println("Косинус угла 40 = " + cos40);
+		System.out.print("\n-------------------------------\n");
+		
+		System.out.print("Введите длину первого катета a: ");
+		double a = in.nextDouble();
+        System.out.print("Введите длину второго катета b: ");
+        double b = in.nextDouble();
+
+        double square = 0.5 * a * b;
+        double c = Math.sqrt(a * a + b * b);
+        double perimeter = a + b + c;
+		
+        System.out.println("Площадь треугольника: " + square);
+        System.out.println("Периметр треугольника: " + perimeter);
+		System.out.print("\n-------------------------------\n");
+		
+		System.out.print("Введите натуральное положительное число n: ");
+		int n = in.nextInt();
+        String Slovo = Integer.toString(n);
+        int count = Slovo.length();
+        System.out.println("Количество цифр в числе " + n + " равно " + count);
+		System.out.print("\n-------------------------------\n");
+		
+		System.out.print("Введите некоторое вещественное число: ");
+		double no = in.nextDouble();
+        int signum = 0;
+        
+        if (no > 0) 
+		{
+            signum = 1; 
+        } 
+		else if (no < 0) 
+		{
+            signum = -1;
+        }
+        
+        System.out.println("Значение функции сигнум от числа " + no + " равно: " + signum);
+	}
+}
